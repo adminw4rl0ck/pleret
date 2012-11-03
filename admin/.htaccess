@@ -1,0 +1,79 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^/?dashboard/?$ index.php?page=home [L]
+RewriteRule ^/?404.php?$ index.php?page=404 [L]
+
+#rewrite for profil
+RewriteRule ^/?profil/?$ index.php?page=profil [L]
+
+#rewrite for berita
+RewriteRule ^/?berita/?$ index.php?page=berita [L]
+RewriteRule ^/?berita/tambah/?$ index.php?page=tambah-berita [L]
+RewriteRule ^/?berita/page-([0-9]+)/?$ index.php?page=berita&hal=$1 [L]
+RewriteRule ^/?berita/edit/([a-z-A-Z-0-9]+)/?$ index.php?page=edit-berita&id=$1 [L]
+RewriteRule ^/?berita/edit/([a-z-A-Z-0-9]+)-error/?$ index.php?page=edit-berita&id=$1&s=error [L]
+RewriteRule ^/?berita/sukses-update/?$ index.php?page=berita&s=suksesUpdate [L]
+RewriteRule ^/?berita/edit-berita.php/?$ proses.php?w4rl0ck&act=edit-berita [L]
+RewriteRule ^/?berita/hapus/([a-z-A-Z-0-9]+)/?$ proses.php?w4rl0ck&act=hapus-berita&id=$1 [L]
+RewriteRule ^/?berita/sukses-hapus/?$ index.php?page=berita&s=sukses_hapus [L]
+RewriteRule ^/?berita/error/?$ index.php?page=berita&s=error [L]
+RewriteRule ^/?berita/tambah/sukses/?$ index.php?page=berita&s=tambah-berita [L]
+RewriteRule ^/?berita/tambah/error/?$ index.php?page=berita&s=idSama [L]
+
+#rewrite for fasilitas
+RewriteRule ^/?fasilitas/?$ index.php?page=fasilitas [L]
+RewriteRule ^/?fasilitas/isi/?$ index.php?page=isi-fasilitas [L]
+RewriteRule ^/?fasilitas/edit_([a-z-A-Z-0-9]+)/?$ index.php?page=edit-fasilitas&id=$1 [L]
+RewriteRule ^/?fasilitas/edit_([a-z-A-Z-0-9]+)/error/?$ index.php?page=edit-fasilitas&id=$1&s=error [L]
+RewriteRule ^/?fasilitas/edit_([a-z-A-Z-0-9]+)/sukses/?$ index.php?page=edit-fasilitas&id=$1&s=sukses [L]
+
+#rewrite for retribusi
+RewriteRule ^/?retribusi/?$ index.php?page=retribusi [L]
+RewriteRule ^/?retribusi/tambah/?$ index.php?page=tambah-retribusi [L]
+RewriteRule ^/?retribusi/tambah/sukses/?$ index.php?page=retribusi&s=tambah-retribusi [L]
+RewriteRule ^/?retribusi/page-([0-9]+)/?$ index.php?page=retribusi&hal=$1 [L]
+RewriteRule ^/?retribusi/kategori/?$ index.php?page=kategori-retribusi [L]
+RewriteRule ^/?retribusi/kategori/tambah/?$ index.php?page=kategori-tambah [L]
+RewriteRule ^/?retribusi/kategori/error/?$ index.php?page=kategori-retribusi&s=error [L]
+RewriteRule ^/?retribusi/edit/([a-z-A-Z-0-9]+)/?$ index.php?page=edit-retribusi&id=$1 [L]
+RewriteRule ^/?retribusi/edit-retribusi.php/?$ proses.php?w4rl0ck&act=edit-retribusi [L]
+RewriteRule ^/?retribusi/hapus/([a-z-A-Z-0-9]+)/?$ proses.php?w4rl0ck&act=hapus-retribusi&id=$1 [L]
+RewriteRule ^/?retribusi/sukses-update/?$ index.php?page=retribusi&s=suksesUpdate [L]
+RewriteRule ^/?retribusi/sukses-hapus/?$ index.php?page=retribusi&s=sukses_hapus [L]
+RewriteRule ^/?retribusi/error/?$ index.php?page=retribusi&s=error [L]
+
+#rewrite for jaminan kesehatan
+RewriteRule ^/?jamkes/?$ index.php?page=jamkes [L]
+RewriteRule ^/?jamkes/isi/?$ index.php?page=isi-jamkes [L]
+RewriteRule ^/?jamkes/edit_([a-z-A-Z-0-9]+)/?$ index.php?page=edit-jamkes&id=$1 [L]
+RewriteRule ^/?jamkes/edit_([a-z-A-Z-0-9]+)/error/?$ index.php?page=edit-jamkes&id=$1&s=error [L]
+RewriteRule ^/?jamkes/edit_([a-z-A-Z-0-9]+)/sukses/?$ index.php?page=edit-jamkes&id=$1&s=sukses [L]
+
+#rewrite for dokter
+RewriteRule ^/?dokter/?$ index.php?page=dokter [L]
+RewriteRule ^/?dokter/tambah/?$ index.php?page=tambah-dokter [L]
+RewriteRule ^/?dokter/tambah/sukses/?$ index.php?page=dokter&s=tambah-dokter [L]
+RewriteRule ^/?dokter/edit/([a-z-A-Z-0-9]+)/?$ index.php?page=edit-dokter&id=$1 [L]
+RewriteRule ^/?dokter/edit-dokter.php/?$ proses.php?w4rl0ck&act=edit-dokter [L]
+RewriteRule ^/?dokter/sukses-update/?$ index.php?page=dokter&s=suksesUpdate [L]
+RewriteRule ^/?dokter/hapus/([a-z-A-Z-0-9]+)/?$ proses.php?w4rl0ck&act=hapus-dokter&id=$1 [L]
+RewriteRule ^/?dokter/sukses-hapus/?$ index.php?page=dokter&s=sukses-hapus [L]
+RewriteRule ^/?dokter/error/?$ index.php?page=dokter&s=error [L]
+
+#rewrite for layanan
+RewriteRule ^/?layanan/?$ index.php?page=layanan [L]
+RewriteRule ^/?layanan/isi/?$ index.php?page=isi-layanan [L]
+RewriteRule ^/?layanan/edit_([a-z-A-Z-0-9]+)/?$ index.php?page=edit-layanan&id=$1 [L]
+RewriteRule ^/?layanan/edit_([a-z-A-Z-0-9]+)/error/?$ index.php?page=edit-layanan&id=$1&s=error [L]
+RewriteRule ^/?layanan/edit_([a-z-A-Z-0-9]+)/sukses/?$ index.php?page=edit-layanan&id=$1&s=sukses [L]
+
+#rewrite for kritik dan saran
+RewriteRule ^/?kritik.php?$ index.php?page=kritik [L]
+RewriteRule ^/?kritik/tanggapan.php?$ index.php?page=tanggapan [L]
+
+#rewrite for konsultasi
+RewriteRule ^/?konsultasi.php?$ index.php?page=konsultasi [L]
+RewriteRule ^/?konsultasi/tanggapan.php?$ index.php?page=konsultasi-tanggap [L]
+
+</IfModule>

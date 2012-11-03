@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+#
+RewriteRule ^/?profil/?$ index.php?page=profil [L]
+RewriteRule ^/?profil/ubah/?$ index.php?page=profil-ubah [L]
+#
+RewriteRule ^/?berita/?$ index.php?page=berita [L]
+RewriteRule ^/?berita/tambah/?$ index.php?page=berita&s=tambah [L]
+RewriteRule ^/?berita/edit/?$ index.php?page=berita&s=ubah&id=$1 [L]
+RewriteRule ^/?berita/hapus/?$ index.php?page=berita&s=hapus&id=$1 [L]
+#
+RewriteRule ^/?fasilitas/?$ index.php?page=fasilitas [L]
+RewriteRule ^/?fasilitas/ubah/?$ index.php?page=fasilitas&s=ubah [L]
+#
+RewriteRule ^/?retribusi/?$ index.php?page=retribusi [L]
+RewriteRule ^/?retribusi/add/?$ index.php?page=retribusi&s=tambah [L]
+RewriteRule ^/?retribusi/edit/?$ index.php?page=retribusi&s=ubah&id=$1 [L]
+RewriteRule ^/?retribusi/hapus/?$ index.php?page=retribusi&s=hapus&id=$1 [L]
+#
+RewriteRule ^/?jamkes/?$ index.php?page=jamkes [L]
+RewriteRule ^/?jamkes/?$ index.php?page=jamkes&s=tambah [L]
+#
+RewriteRule ^/?dokter/?$ index.php?page=dokter [L]
+RewriteRule ^/?dokter/tambah/?$ index.php?page=dokter &s=tambah[L]
+RewriteRule ^/?dokter/edit/?$ index.php?page=dokter&s=ubah&id=$1 [L]
+RewriteRule ^/?dokter/delete/?$ index.php?page=dokter&s=hapus&id=$1 [L]
+#
+RewriteRule ^/?layanan/?$ index.php?page=layanan [L]
+RewriteRule ^/?layanan/ubah/?$ index.php?page=layanan&s=ubah [L]
+#
+RewriteRule ^/?kritik/?$ index.php?page=kritik [L]
+#
+RewriteRule ^/?konsultasi/?$ index.php?page=konsultasi [L]
+
+</IfModule>
